@@ -86,6 +86,11 @@ public class MainService {
 		System.out.println("Epasts atbilst formatejumam: "
 				+ email.matches(""));
 		
+		String name1 = "Roberts";
+		String name2 = "Roberts Janis";
+		System.out.println(isNameFormatCorrect(name1));
+		System.out.println(isNameFormatCorrect(name2));
+		
 		// ------------------------- Datu tipa mainas piemēri-----------------------//
 		System.out.println("---------------------------------------------");
 		double EX = 3000.154125151;
@@ -122,4 +127,18 @@ public class MainService {
 		return result;
 	}
 
+	//TODO uztaisit funkciju, kas sanem String un atgriezs, vai atbilst varda formatejumam, 
+	//pienemot, ka var but divi vardi personai
+	public static boolean isNameFormatCorrect(String inputName) {
+		if(inputName != null && !inputName.isEmpty()) {	
+			return (inputName.matches("[A-Z]{1}[a-z]{3,10}([ ][A-Z]{1}[a-z]{3,10})?"));		
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	
+	
 }
