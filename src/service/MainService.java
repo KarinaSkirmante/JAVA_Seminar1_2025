@@ -60,6 +60,9 @@ public class MainService {
 		}
 		System.out.println();
 		
+		float avgGradeFromFunc = calculateAVGGrade(grades);
+		System.out.println("Videja atzime ir: " + avgGradeFromFunc);
+		
 		// ------------------------- String piemēri-----------------------//
 		
 		String courseTitle = "Programmesana Timekli JAVA";
@@ -102,6 +105,21 @@ public class MainService {
 		System.out.println("vecums ir: " + agei);
 		
 		
+	}
+	
+	public static float calculateAVGGrade(int [] grades) {
+		float result = 0;
+		
+		if(grades != null)
+		{
+			float sum = 0;
+			for(int temp : grades) {
+				sum += temp;
+			}
+			result = sum/grades.length;
+		}
+		
+		return result;
 	}
 
 }
